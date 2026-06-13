@@ -251,6 +251,8 @@ with col_right:
             'silhouette': round(sil, 4),
             'status':     'Completed',
         })
+        save_history(st.session_state.projects)
+
 
         # Store summary for persistent display
         noise_str = f" · {noise} noise pts" if noise > 0 else ""
