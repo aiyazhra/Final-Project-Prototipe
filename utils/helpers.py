@@ -5,6 +5,27 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import random
+import json
+import os
+
+_HISTORY_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'history.json')
+
+def load_history():
+    if os.path.exists(_HISTORY_FILE):
+        try:
+            with open(_HISTORY_FILE, 'r') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return []
+
+def save_history(projects):
+    try:
+        with open(_HISTORY_FILE, 'w') as f:
+            json.dump(projects, f)
+    except Exception:
+        pass
+
 
 # ─── Custom CSS ───────────────────────────────────────────────────────────────
 
@@ -307,7 +328,7 @@ def init_session():
         'davies_bouldin':   None,
         'calinski_harabasz':None,
         'cluster_summary':  None,
-        'projects':         [],
+        'projects': load_history(),
         'col_map':          {},
     }
     for key, val in defaults.items():
