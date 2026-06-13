@@ -127,6 +127,7 @@ section[data-testid="stSidebar"] .stPageLink a {
 [data-testid="stDataFrame"] { border-radius: 12px !important; overflow: hidden !important; border: 1px solid #e2e8f0 !important; }
 
 .stTextInput > div > div, .stNumberInput > div > div { border-radius: 8px !important; background: white !important; }
+.stTextInput input { padding-top: 6px !important; padding-bottom: 14px !important; }
 .stSelectbox > div > div { border-radius: 8px !important; background: white !important; }
 .stSlider { background: transparent !important; }
 
