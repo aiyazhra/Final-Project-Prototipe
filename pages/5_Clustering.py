@@ -5,7 +5,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.helpers import *
 
-st.set_page_config(page_title="Clustering — ClusterViz", page_icon="🔵", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Clustering — ClusterHub", page_icon="🔵", layout="wide", initial_sidebar_state="expanded")
 apply_styles()
 require_login()
 render_nav('cluster')
