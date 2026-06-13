@@ -8,7 +8,7 @@ init_session()
 if not st.session_state.get('logged_in'):
     # ─── Login page ───────────────────────────────────────────────────────────
     st.set_page_config(
-        page_title="ClusterViz — Login",
+        page_title="ClusterHub — Login",
         page_icon="🔵",
         layout="centered",
         initial_sidebar_state="collapsed",
@@ -266,7 +266,7 @@ section[data-testid="stSidebar"]{display:none!important;}
 else:
     # ─── Authenticated app with hidden auto-nav ────────────────────────────────
     st.set_page_config(
-        page_title="ClusterViz",
+        page_title="ClusterHub",
         page_icon="🔵",
         layout="wide",
         initial_sidebar_state="expanded",
