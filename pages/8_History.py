@@ -71,6 +71,7 @@ if projects:
             with act3:
                 if st.button("🗑️ Delete", use_container_width=True):
                     st.session_state.projects = [p for p in st.session_state.projects if p['name']!=sel_name]
+                    save_history(st.session_state.projects)
                     st.success(f"Deleted '{sel_name}'")
                     st.rerun()
     else:
