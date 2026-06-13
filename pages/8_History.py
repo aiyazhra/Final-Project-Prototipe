@@ -5,7 +5,7 @@ import io, sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.helpers import *
 
-st.set_page_config(page_title="History — ClusterViz", page_icon="📁", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="History — ClusterHub", page_icon="📁", layout="wide", initial_sidebar_state="expanded")
 apply_styles()
 require_login()
 render_nav('history')
