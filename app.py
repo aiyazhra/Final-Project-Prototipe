@@ -246,13 +246,16 @@ section[data-testid="stSidebar"]{display:none!important;}
             )
 
         submitted = st.form_submit_button("Sign In", use_container_width=True)
+        VALID_USERS = {
+            'Admin': 'admin123',
+        }
         if submitted:
-            if username.strip() and password.strip():
+            if VALID_USERS.get(username.strip()) == password.strip():
                 st.session_state.logged_in = True
                 st.session_state.username = username.strip()
                 st.rerun()
             else:
-                st.error("Please enter username and password.")
+                st.error("Invalid username or password.")
 
     st.markdown("""
     <div style="text-align:center;margin-top:16px;padding-bottom:4px;font-size:11px;color:#9ca3af;">
