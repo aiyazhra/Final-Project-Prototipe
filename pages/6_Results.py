@@ -239,9 +239,6 @@ st.markdown("---")
 st.markdown("#### Cluster Members")
 st.caption(
     f"Sorted by CLV score (highest first). "
-    f"Formula: CLV = −(W_R × R_norm) + (W_F × F_norm) + (W_M × M_norm) "
-    f"with AHP weights R={w_r:.3f}, F={w_f:.3f}, M={w_m:.3f}. "
-    f"Individual R/F/M are min-max normalized across all customers."
 )
 
 valid_cluster_ids = sorted([c for c in summary['Cluster'].unique() if c != -1])
