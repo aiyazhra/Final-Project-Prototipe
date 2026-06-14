@@ -238,7 +238,7 @@ st.dataframe(disp, use_container_width=True, hide_index=True)
 st.markdown("---")
 st.markdown("#### Cluster Members")
 st.caption(
-    f"Sorted by CLV score (highest first). "
+    f"Sorted by CLV score (highest first) "
 )
 
 valid_cluster_ids = sorted([c for c in summary['Cluster'].unique() if c != -1])
